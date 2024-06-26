@@ -1,12 +1,20 @@
 package com.example.tests.model;
 
+import jakarta.persistence.*;
+
 import java.util.LinkedList;
 import java.util.List;
 
+@Entity
 public class Exchange {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "t")
     private String table;
     private String currency;
     private String code;
+    @OneToMany
     private List<Rate> rates;
 
     public Exchange(String table, String currency, String code, List<Rate> rates) {

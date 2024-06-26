@@ -9,7 +9,6 @@ import org.springframework.boot.test.autoconfigure.json.JsonTest;
 import org.springframework.boot.test.json.JacksonTester;
 import org.springframework.boot.test.json.JsonContent;
 import org.springframework.boot.test.json.ObjectContent;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.io.File;
@@ -21,7 +20,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @JsonTest
-public class JacksonWithRestTmpTests {
+public class JacksonWithWebClientTests {
     @Autowired
     private JacksonTester<Exchange> json;
     private WebClient webClient = WebClient.builder().build();

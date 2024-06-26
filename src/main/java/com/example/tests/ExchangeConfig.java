@@ -7,7 +7,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
 public class ExchangeConfig {
-
+    
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
